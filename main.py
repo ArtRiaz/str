@@ -14,7 +14,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(Text(equals='photo'))
 async def get_photo(message: types.Message):
-    with open('/Users/artem/Desktop/test.jpg', 'rb') as photo:
+    with open('test.jpg', 'rb') as photo:
         await bot.send_photo(chat_id=message.from_user.id, photo=photo)
 
 
