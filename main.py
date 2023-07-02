@@ -7,7 +7,7 @@ async def on_startup(_):
     print('Бот запущен')
 
 
-@dp.message_handler(Text(equals='start'))
+@dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     await message.answer('Привет')
 
